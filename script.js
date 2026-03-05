@@ -45,7 +45,5 @@ function abrirLocal() {
 }
 
 function confirmarPresenca() {
-    const numero = "5511999999999"; // COLOQUE O NÚMERO AQUI (DDD + NUMERO, SEM ESPAÇOS)
-    const texto = encodeURIComponent("Oi Ester! Confirmo minha presença na sua festa Fundo do Mar! 🧜‍♀️💙");
-    window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+    window.open("https://w.app/vmafew", "_blank");
 }
