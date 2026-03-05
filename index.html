@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Ester • 16 Anos • Uma Aventura no Oceano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <section id="inicio" class="inicio">
+    <div class="conteudo-inicio">
+      <h1>🧜‍♀️ Um Convite Mágico 🧜‍♀️</h1>
+      <p>Prepare-se para mergulhar nessa celebração!</p>
+      <button class="btn-principal" onclick="abrirConvite()">✨ ABRA AQUI ✨</button>
+    </div>
+  </section>
+
+  <section id="convite" class="convite oculto">
+    
+    <div class="efeito-agua"></div>
+
+    <div class="bolhas-container">
+      <div class="bolha bolha-p"></div>
+      <div class="bolha bolha-m"></div>
+      <div class="bolha bolha-g"></div>
+      <div class="bolha bolha-p"></div>
+      <div class="bolha bolha-m"></div>
+    </div>
+
+    <h2 class="nome">Ester</h2>
+    <p class="idade">Meus 16 Anos 🫧</p>
+
+    <div class="info">
+      <p>📅 <span class="destaque">21 de Abril</span></p>
+      <p>⏰ <span class="destaque">15:00</span></p>
+      <p id="contador">Calculando a maré...</p>
+    </div>
+
+    <div class="botoes">
+      <button onclick="abrirLocal()">📍 Nosso Recife (Localização)</button>
+      <button class="confirmar" onclick="confirmarPresenca()">💙 Confirmar Presença (WhatsApp)</button>
+      <button class="presentes-btn" onclick="togglePresentes()">🎁 Tesouros da Ester (Sugestões)</button>
+    </div>
+
+    <section id="presentes" class="presentes oculto">
+      <h2>🐚 Tesouros da Sereia 🐚</h2>
+      <div class="lista-presentes">
+        <h3>💖 Perfumes (adocicados)</h3>
+        <p>Egeo, Ilía, Coffee Woman</p>
+
+        <h3>🌸 Body Splash</h3>
+        <p>WePink, O Boticário</p>
+
+        <h3>🧴 Hidratante</h3>
+        <p>O Boticário, Eudora, Natura</p>
+
+        <h3>👗 Roupas (Livre)</h3>
+        <p>Tamanho M</p>
+
+        <h3>💄 Maquiagem (Base cor 70)</h3>
+        <p>Natura, Francine, Ruby Rose, Mari Maria</p>
+
+        <h3>💸 Presentes Virtuais</h3>
+        <p>Dinheiro ou Pix (Tesouro Real)</p>
+      </div>
+
+      <p class="obs">✨ Fiquem à vontade para decidir! ✨</p>
+      <button class="fechar" onclick="togglePresentes()">⬆ Fechar Baú</button>
+    </section>
+  </section>
+
+  <section id="convite" class="convite oculto">
+    <div class="efeito-agua"></div>
+    <div class="bolhas-container">
+        <div class="bolha bolha-p"></div>
+        <div class="bolha bolha-m"></div>
+        <div class="bolha bolha-g"></div>
+    </div>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
