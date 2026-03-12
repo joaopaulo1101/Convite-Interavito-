@@ -1,4 +1,4 @@
-/* --- CONFIGURAÇÕES GERAIS --- */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 
 body {
   min-height: 100vh;
-  /* Fundo Azul Profundo do Oceano */
+  
   background-color: #001219;
   background-image: linear-gradient(180deg, #003566 0%, #001219 100%);
   color: #fff;
@@ -20,7 +20,7 @@ body {
   padding: 20px;
 }
 
-/* --- AUXILIARES --- */
+
 .oculto {
   display: none !important;
 }
@@ -30,11 +30,11 @@ body {
   font-weight: 600;
 }
 
-/* --- TELA INICIAL --- */
+
 .inicio {
   text-align: center;
   animation: fadeIn 1.5s ease;
-  z-index: 10; /* Garante que fique acima de tudo no início */
+  z-index: 10; 
   position: relative;
 }
 
@@ -80,11 +80,11 @@ body {
 
 .btn-principal:active { transform: scale(0.95); }
 
-/* --- CONVITE PRINCIPAL (Com Efeito de Água) --- */
+
 .convite {
   position: relative;
   text-align: center;
-  /* Fundo escuro semi-transparente para o texto destacar */
+  
   background: rgba(0, 15, 30, 0.85); 
   backdrop-filter: blur(10px);
   padding: 45px 25px;
@@ -94,7 +94,7 @@ body {
   border: 2px solid rgba(125, 211, 252, 0.3);
   box-shadow: 0 20px 50px rgba(0,0,0,0.6);
   animation: subirConvite 1s ease-out;
-  overflow: hidden; /* Importante para o efeito de água não sair */
+  overflow: hidden; 
   z-index: 1;
 }
 
@@ -103,36 +103,35 @@ body {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* --- O EFEITO DE FUNDO DO MAR (Caustics com CSS) --- */
 .efeito-agua {
   position: absolute;
   inset: 0;
-  z-index: -2; /* Atrás de tudo dentro do convite */
-  opacity: 0.2; /* Leve para não brigar com o texto */
+  z-index: -2; 
+  opacity: 0.2; 
   
-  /* Criando o padrão de reflexo usando gradientes radiais sobrepostos */
+  
   background-image: 
     radial-gradient(circle at 50% 50%, #7dd3fc 0%, transparent 10%),
     radial-gradient(circle at 20% 80%, #bae6fd 0%, transparent 15%),
     radial-gradient(circle at 80% 20%, #38bdf8 0%, transparent 12%),
     radial-gradient(circle at 10% 10%, #fff 0%, transparent 8%);
   
-  background-size: 100px 100px; /* Tamanho do padrão */
+  background-size: 100px 100px; 
   background-repeat: repeat;
   
-  /* Filtro para dar o aspecto borrado de água */
+  
   filter: blur(5px) contrast(2);
   
-  /* Animação para simular o movimento da água */
+  
   animation: movimentoAgua 15s linear infinite;
 }
 
 @keyframes movimentoAgua {
   0% { background-position: 0 0; }
-  100% { background-position: 200px 200px; } /* Faz o padrão andar */
+  100% { background-position: 200px 200px; } 
 }
 
-/* --- TEXTOS DO CONVITE --- */
+
 .nome {
   font-family: 'Playfair Display', serif;
   font-size: 60px;
@@ -177,7 +176,7 @@ body {
   border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
-/* --- BOTÕES DO CONVITE --- */
+
 .botoes {
   margin-top: 30px;
   display: flex;
@@ -195,16 +194,16 @@ body {
   color: #fff;
   transition: all 0.3s ease;
   position: relative;
-  z-index: 5; /* Acima do efeito de água e bolhas */
+  z-index: 5; 
   box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
-/* Botão padrão (Localização) */
+
 .convite button:not(.confirmar):not(.presentes-btn):not(.fechar) {
   background: linear-gradient(90deg, #0284c7, #0369a1);
 }
 
-/* Efeitos de Hover nos botões */
+
 .convite button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0,0,0,0.4);
@@ -221,7 +220,7 @@ body {
   border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* --- SEÇÃO PRESENTES --- */
+
 .presentes {
   margin-top: 30px;
   background: rgba(0, 10, 30, 0.98);
@@ -229,7 +228,7 @@ body {
   padding: 30px 20px;
   border: 1px solid rgba(56, 189, 248, 0.5);
   animation: fadeIn 0.5s ease;
-  z-index: 10; /* Garante que fique acima do efeito de água */
+  z-index: 10; 
   position: relative;
 }
 
@@ -273,12 +272,12 @@ body {
   background: rgba(56, 189, 248, 0.1) !important;
 }
 
-/* --- SISTEMA DE BOLHAS MELHORADO --- */
+
 .bolhas-container {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: -1; /* Atrás dos botões, mas à frente do efeito de água */
+  z-index: -1; 
 }
 
 .bolha {
@@ -290,10 +289,10 @@ body {
   opacity: 0;
 }
 
-/* --- CONFIGURAÇÕES DO FUNDO AZUL --- */
+
 body {
   min-height: 100vh;
-  /* Gradiente que simula a profundidade do oceano */
+  
   background: linear-gradient(to bottom, #005f73 0%, #0a9396 20%, #001219 100%);
   color: #fff;
   overflow-x: hidden;
@@ -304,7 +303,7 @@ body {
   padding: 20px;
 }
 
-/* Efeito de Raios de Luz vindo de cima */
+
 body::before {
   content: "";
   position: fixed;
@@ -327,11 +326,11 @@ body::before {
   to { transform: rotate(360deg); }
 }
 
-/* --- O CONVITE (Ajustado para o fundo azul) --- */
+
 .convite {
   position: relative;
   text-align: center;
-  /* Azul marinho bem profundo e transparente para o vidro */
+  
   background: rgba(0, 33, 55, 0.7); 
   backdrop-filter: blur(15px);
   padding: 45px 25px;
@@ -345,7 +344,7 @@ body::before {
   overflow: hidden;
 }
 
-/* Efeito de Reflexo de Água (Caustics) mais visível no azul */
+
 .efeito-agua {
   position: absolute;
   inset: 0;
@@ -364,7 +363,7 @@ body::before {
   to { background-position: 300px 300px; }
 }
 
-/* Bolhas Brancas (Se destacam no azul) */
+
 .bolha {
   position: absolute;
   background: rgba(255, 255, 255, 0.3);
@@ -374,12 +373,11 @@ body::before {
   animation: flutuarBolha linear infinite;
 }
 
-/* Tamanhos das bolhas */
 .bolha-p { width: 12px; height: 12px; }
 .bolha-m { width: 25px; height: 25px; }
 .bolha-g { width: 35px; height: 35px; }
 
-/* Posições e durações variadas */
+
 .bolha:nth-child(1) { left: 15%; animation-duration: 9s; animation-delay: 0s; }
 .bolha:nth-child(2) { left: 35%; animation-duration: 11s; animation-delay: 2s; }
 .bolha:nth-child(3) { left: 55%; animation-duration: 8s; animation-delay: 4s; }
@@ -393,13 +391,13 @@ body::before {
   100% { transform: translateY(-10%) scale(1.3); opacity: 0; }
 }
 
-/* --- ANIMAÇÕES GERAIS --- */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-/* --- RESPONSIVIDADE --- */
+
 @media (max-width: 420px) {
   .nome { font-size: 50px; }
   .idade { font-size: 18px; letter-spacing: 2px; }
