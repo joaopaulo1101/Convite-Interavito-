@@ -44,5 +44,5 @@ function abrirLocal() {
 }
 
 function confirmarPresenca() {
-    window.open("https://w.app/vmafew", "_blank");
+    window.open("https://wa.me/553299376448?text=Ola,%20Gostaria%20de%20estar%20confirmando%20minha%20presen%C3%A7a%20no%20aniversario%20da%20Ester%20%F0%9F%A5%B3%F0%9F%A5%B3");
 }
